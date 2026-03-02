@@ -2,6 +2,9 @@
 
 Generics дозволяють створювати компоненти, що працюють з різними типами.
 
+::: tip Playground
+[Відкрити приклади в TypeScript Playground](https://www.typescriptlang.org/play?#code/GYVwdgxgLglg9mABMAFADwFyLCAWwKYBOAFFAIYA2UAFAE4CUiA3gFCKKYQyIDOT6UWvRYA6AOYAaRAAtOuAsTKUadBk1bsu3XvyGjxk6bOGL6TNpx79Bo8VMky5i5WsDqteozfsuBYiZNnM+M4y8oo+qtb+qo5hLm4e0V4+-kGhKhFR0cmubh5JGr76RqbmlsFWdrbxjslunt7BFYE1deH1UQ2ejc2tbdVddb0Dg8OjzuOT09MTc-ML7UtAA)
+
 ## Проблема без Generics
 
 ```typescript

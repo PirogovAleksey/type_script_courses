@@ -82,30 +82,40 @@ export default defineConfig({
         ]
       },
       {
-        text: '8. Декоратори',
+        text: '8. Просунуті типи',
         collapsed: false,
         items: [
-          { text: 'Вступ до декораторів', link: '/08-decorators/intro' },
-          { text: 'Декоратори класів', link: '/08-decorators/class-decorators' },
-          { text: 'Декоратори методів', link: '/08-decorators/method-decorators' },
-          { text: 'Декоратори властивостей', link: '/08-decorators/property-decorators' },
+          { text: 'Utility Types', link: '/08-advanced/utility-types' },
+          { text: 'Type Guards', link: '/08-advanced/type-guards' },
+          { text: 'Declaration Files', link: '/08-advanced/declaration-files' },
+          { text: 'Namespaces', link: '/08-advanced/namespaces' },
         ]
       },
       {
-        text: '9. Практика',
+        text: '9. Декоратори',
         collapsed: false,
         items: [
-          { text: 'Проєкт: Todo App', link: '/09-practice/todo-app' },
-          { text: 'Проєкт: API Client', link: '/09-practice/api-client' },
+          { text: 'Вступ до декораторів', link: '/09-decorators/intro' },
+          { text: 'Декоратори класів', link: '/09-decorators/class-decorators' },
+          { text: 'Декоратори методів', link: '/09-decorators/method-decorators' },
+          { text: 'Декоратори властивостей', link: '/09-decorators/property-decorators' },
         ]
       },
       {
-        text: '10. Тести',
+        text: '10. Практика',
         collapsed: false,
         items: [
-          { text: 'Quiz: Базові типи', link: '/10-quiz/basic-types' },
-          { text: 'Quiz: Функції та класи', link: '/10-quiz/functions-classes' },
-          { text: 'Quiz: Generics', link: '/10-quiz/generics' },
+          { text: 'Проєкт: Todo App', link: '/10-practice/todo-app' },
+          { text: 'Проєкт: API Client', link: '/10-practice/api-client' },
+        ]
+      },
+      {
+        text: '11. Тести',
+        collapsed: false,
+        items: [
+          { text: 'Quiz: Базові типи', link: '/11-quiz/basic-types' },
+          { text: 'Quiz: Функції та класи', link: '/11-quiz/functions-classes' },
+          { text: 'Quiz: Generics', link: '/11-quiz/generics' },
         ]
       },
     ],

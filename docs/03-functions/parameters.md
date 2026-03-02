@@ -2,6 +2,9 @@
 
 Функції — основа будь-якої програми. TypeScript дозволяє типізувати їх параметри.
 
+::: tip Playground
+[Відкрити приклади в TypeScript Playground](https://www.typescriptlang.org/play?#code/GYVwdgxgLglg9mABMGAbKBTATgRgDwAqAfABQCUiA3gFCKKoCeADuvcgFyLpQjIC2AIwgAnGIhYgcAcwA0iAIaJsuAsTJUadRi3aceAoSPFSZ8xcvWN2nbr35DR4ydJoB6R4gC8vxIgDaAXUQAXwio6Jj-CQkpGXlFZVV1TW1dPSh9IxNzS2s7R2cXDy8fPwCgkLCI6LiE5OSUtKgMiSA)
+
 ## Базова типізація
 
 ```typescript
@@ -215,10 +218,15 @@ console.log(counter.increment()); // 14
 console.log(counter.decrement()); // 12
 ```
 
-## Практичне завдання
+## Практичні завдання
+
+::: tip Playground
+[Відкрити завдання в Playground](https://www.typescriptlang.org/play?#code/PTAEFpK6dBhALAlgZ1ACgJYDsDOAXUATwAdJQBvAXwChRQAPCPAE0gBsGBXSAG0kvQCGAYwD2Ad0gBeUABEB-PkNHiAfKADaAXVABKDTv1DJ0mfMXKVa9lp16Dho6fOWVNnfqMnTF6xxYAaF3cPTW0rOz9HZycXd01tSN0TM0trGP8Ax0TE7SgUlOMzSxMiIA)
+:::
+
+### Завдання 1: Форматування ціни
 
 ```typescript
-// 1. Створи функцію для форматування ціни
 function formatPrice(
   amount: number,
   currency: string = 'UAH',
@@ -230,13 +238,64 @@ function formatPrice(
   }).format(amount);
 }
 
-// 2. Створи функцію з callback
+// Тести:
+console.log(formatPrice(1234.5));          // "1 234,50 ₴"
+console.log(formatPrice(99.99, 'USD'));    // "$99.99"
+```
+
+### Завдання 2: Функція з callback
+
+```typescript
 function fetchData<T>(
   url: string,
   onSuccess: (data: T) => void,
   onError?: (error: Error) => void
 ): void {
-  // Implementation
+  fetch(url)
+    .then(res => res.json())
+    .then(onSuccess)
+    .catch(err => onError?.(err));
+}
+```
+
+### Завдання 3: Функція пошуку
+
+```typescript
+function findInArray<T>(
+  arr: T[],
+  predicate: (item: T, index: number) => boolean
+): T | undefined {
+  for (let i = 0; i < arr.length; i++) {
+    if (predicate(arr[i], i)) {
+      return arr[i];
+    }
+  }
+  return undefined;
+}
+
+// Тести:
+const numbers = [1, 2, 3, 4, 5];
+const found = findInArray(numbers, n => n > 3);
+console.log(found); // 4
+```
+
+### Завдання 4: Retry функція
+
+```typescript
+async function retry<T>(
+  fn: () => Promise<T>,
+  attempts: number = 3,
+  delay: number = 1000
+): Promise<T> {
+  for (let i = 0; i < attempts; i++) {
+    try {
+      return await fn();
+    } catch (error) {
+      if (i === attempts - 1) throw error;
+      await new Promise(r => setTimeout(r, delay));
+    }
+  }
+  throw new Error('Unreachable');
 }
 ```
 

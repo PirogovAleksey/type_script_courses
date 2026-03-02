@@ -2,6 +2,9 @@
 
 TypeScript підтримує всі примітивні типи JavaScript та додає свої.
 
+::: tip Playground
+[Відкрити приклади в TypeScript Playground](https://www.typescriptlang.org/play?#code/DYUwLgBAlgzgggOwJ4C4IENkCgDGB7EAEwgF4IAiAMQFEBJAbQF0BKCAfggG8IoI4kAZhACuEAFwQeQkWMky5ACgBmwMMHQZsufIVIUKVOo2ZtO3Hr36CRYyQBouM+YpXadew8bMW+QkdZcPPxC4ipO6po6+kYm5pbCNvYOLm6ePoF+gqGKKsZBoXoRJoggCMgQADYQYADuEKEAJj4CANwQGk2t7RDhkdEQMnW+PoJAA)
+
 ## string
 
 Для текстових даних:
@@ -123,16 +126,72 @@ console.log(greet('Anna'));  // "Hello, Anna!"
 console.log(greet(null));    // "Hello, Guest!"
 ```
 
-## Практичне завдання
+## Практичні завдання
 
-Створи змінні для профілю користувача:
+::: tip Playground
+[Відкрити завдання в Playground](https://www.typescriptlang.org/play?#code/PTAEFpK6dBhALAlgZ1AUwE4HsB2oDGANgIagBOkoAvKAN4C+oAZqJLIgFygDkAogBUA5ALIA1SkQAU-QaAAWAQxYBXUMm7IANKAAMASlDoAvKHRMA3OChxIBgGZxQoANYsA5pesBrEuhegRAFtJCFBzYJZWUEDMIA)
+:::
+
+### Завдання 1: Профіль користувача
 
 ```typescript
-// Твій код тут:
+// Створи змінні для профілю:
 let username: string = '';
 let userAge: number = 0;
 let isVerified: boolean = false;
 let accountType: 'free' | 'premium' = 'free';
+```
+
+### Завдання 2: Функція форматування
+
+```typescript
+// Напиши функцію, що форматує ціну:
+function formatPrice(amount: number, currency: string = 'UAH'): string {
+  return `${amount.toFixed(2)} ${currency}`;
+}
+
+// Тести:
+console.log(formatPrice(99.5));        // "99.50 UAH"
+console.log(formatPrice(100, 'USD'));  // "100.00 USD"
+```
+
+### Завдання 3: Типи для налаштувань
+
+```typescript
+// Створи типи для конфігурації:
+type Theme = 'light' | 'dark' | 'system';
+type Language = 'uk' | 'en' | 'de';
+
+interface Settings {
+  theme: Theme;
+  language: Language;
+  notifications: boolean;
+  fontSize: number;
+}
+
+const defaultSettings: Settings = {
+  theme: 'system',
+  language: 'uk',
+  notifications: true,
+  fontSize: 16
+};
+```
+
+### Завдання 4: Nullable значення
+
+```typescript
+// Напиши функцію, що безпечно отримує довжину:
+function getLength(value: string | null | undefined): number {
+  if (value == null) {
+    return 0;
+  }
+  return value.length;
+}
+
+// Тести:
+console.log(getLength('hello'));     // 5
+console.log(getLength(null));        // 0
+console.log(getLength(undefined));   // 0
 ```
 
 ## Висновок
