@@ -34,6 +34,7 @@ export default defineConfig({
           { text: 'Примітивні типи', link: '/02-basic-types/primitives' },
           { text: 'Масиви та кортежі', link: '/02-basic-types/arrays-tuples' },
           { text: 'Enum, Any, Unknown', link: '/02-basic-types/enum-any-unknown' },
+          { text: 'Quiz: Базові типи', link: '/12-interactive-quiz/basic-types' },
         ]
       },
       {
@@ -43,6 +44,7 @@ export default defineConfig({
           { text: 'Типізація параметрів', link: '/03-functions/parameters' },
           { text: 'Типи повернення', link: '/03-functions/return-types' },
           { text: 'Перевантаження функцій', link: '/03-functions/overloading' },
+          { text: 'Quiz: Функції', link: '/12-interactive-quiz/functions' },
         ]
       },
       {
@@ -52,6 +54,7 @@ export default defineConfig({
           { text: 'Interfaces', link: '/04-interfaces/interfaces' },
           { text: 'Type Aliases', link: '/04-interfaces/type-aliases' },
           { text: 'Interface vs Type', link: '/04-interfaces/interface-vs-type' },
+          { text: 'Quiz: Інтерфейси та типи', link: '/12-interactive-quiz/interfaces' },
         ]
       },
       {
@@ -61,6 +64,7 @@ export default defineConfig({
           { text: 'Основи класів', link: '/05-classes/basics' },
           { text: 'Модифікатори доступу', link: '/05-classes/access-modifiers' },
           { text: 'Абстрактні класи', link: '/05-classes/abstract' },
+          { text: 'Quiz: Класи', link: '/12-interactive-quiz/classes' },
         ]
       },
       {
@@ -71,6 +75,7 @@ export default defineConfig({
           { text: 'Generic функції', link: '/06-generics/functions' },
           { text: 'Generic класи', link: '/06-generics/classes' },
           { text: 'Constraints', link: '/06-generics/constraints' },
+          { text: 'Quiz: Generics', link: '/12-interactive-quiz/generics' },
         ]
       },
       {
@@ -107,17 +112,6 @@ export default defineConfig({
         items: [
           { text: 'Проєкт: Todo App', link: '/10-practice/todo-app' },
           { text: 'Проєкт: API Client', link: '/10-practice/api-client' },
-        ]
-      },
-      {
-        text: '11. Інтерактивні тести',
-        collapsed: false,
-        items: [
-          { text: 'Quiz: Базові типи', link: '/12-interactive-quiz/basic-types' },
-          { text: 'Quiz: Функції', link: '/12-interactive-quiz/functions' },
-          { text: 'Quiz: Класи', link: '/12-interactive-quiz/classes' },
-          { text: 'Quiz: Інтерфейси та типи', link: '/12-interactive-quiz/interfaces' },
-          { text: 'Quiz: Generics', link: '/12-interactive-quiz/generics' },
         ]
       },
     ],
