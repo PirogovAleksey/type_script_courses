@@ -7,7 +7,7 @@ export default defineConfig({
   base: '/type_script_courses/',
 
   head: [
-    ['link', { rel: 'icon', href: '/type_script_courses/favicon.ico' }]
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/type_script_courses/favicon.svg' }]
   ],
 
   themeConfig: {
@@ -82,22 +82,41 @@ export default defineConfig({
         ]
       },
       {
-        text: '8. Практика',
+        text: '8. Декоратори',
         collapsed: false,
         items: [
-          { text: 'Проєкт: Todo App', link: '/08-practice/todo-app' },
-          { text: 'Проєкт: API Client', link: '/08-practice/api-client' },
+          { text: 'Вступ до декораторів', link: '/08-decorators/intro' },
+          { text: 'Декоратори класів', link: '/08-decorators/class-decorators' },
+          { text: 'Декоратори методів', link: '/08-decorators/method-decorators' },
+          { text: 'Декоратори властивостей', link: '/08-decorators/property-decorators' },
+        ]
+      },
+      {
+        text: '9. Практика',
+        collapsed: false,
+        items: [
+          { text: 'Проєкт: Todo App', link: '/09-practice/todo-app' },
+          { text: 'Проєкт: API Client', link: '/09-practice/api-client' },
+        ]
+      },
+      {
+        text: '10. Тести',
+        collapsed: false,
+        items: [
+          { text: 'Quiz: Базові типи', link: '/10-quiz/basic-types' },
+          { text: 'Quiz: Функції та класи', link: '/10-quiz/functions-classes' },
+          { text: 'Quiz: Generics', link: '/10-quiz/generics' },
         ]
       },
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com' }
+      { icon: 'github', link: 'https://github.com/PirogovAleksey' }
     ],
 
     footer: {
       message: 'Курс TypeScript',
-      copyright: 'Copyright © 2024'
+      copyright: 'Copyright © 2024 PirogovAleksey'
     },
 
     search: {
