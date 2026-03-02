@@ -110,12 +110,14 @@ export default defineConfig({
         ]
       },
       {
-        text: '11. Тести',
+        text: '11. Інтерактивні тести',
         collapsed: false,
         items: [
-          { text: 'Quiz: Базові типи', link: '/11-quiz/basic-types' },
-          { text: 'Quiz: Функції та класи', link: '/11-quiz/functions-classes' },
-          { text: 'Quiz: Generics', link: '/11-quiz/generics' },
+          { text: 'Quiz: Базові типи', link: '/12-interactive-quiz/basic-types' },
+          { text: 'Quiz: Функції', link: '/12-interactive-quiz/functions' },
+          { text: 'Quiz: Класи', link: '/12-interactive-quiz/classes' },
+          { text: 'Quiz: Інтерфейси та типи', link: '/12-interactive-quiz/interfaces' },
+          { text: 'Quiz: Generics', link: '/12-interactive-quiz/generics' },
         ]
       },
     ],
